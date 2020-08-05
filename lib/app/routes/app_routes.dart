@@ -1,6 +1,7 @@
 import 'package:get/get.dart';
 import 'package:multilevel_dropdown_app/app/ui/android/drop.dart';
 import 'package:multilevel_dropdown_app/app/ui/android/drop_get.dart';
+import 'package:multilevel_dropdown_app/app/ui/android/form_widgets_exemple.dart';
 import 'package:multilevel_dropdown_app/app/ui/android/home_page.dart';
 
 class AppRoutes {
@@ -16,6 +17,10 @@ class AppRoutes {
     GetPage(
       name: '/drop-get',
       page: () => DropGetPage(),
+    ),
+    GetPage(
+      name: '/form-widgets',
+      page: () => FormWidgetsExemple(),
     ),
   ];
 }
