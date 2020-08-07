@@ -1,5 +1,7 @@
 # multilevel_dropdown_app
 
+Example of using DropDwonButtonFormField multi-dependency with Flutter and the GetX package
+
 Exemplo de utilização de DropDwonButtonFormField multi dependência com Flutter e o package GetX
 
 ## Getting Started
