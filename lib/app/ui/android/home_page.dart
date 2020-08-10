@@ -29,7 +29,7 @@ class HomePage extends StatelessWidget {
         builder: (_) {
           return _.loading.value
               ? BuildLoading(
-                      text: 'Carregando dados...', circularIndicatorSize: 20)
+                      text: 'Loading data...', circularIndicatorSize: 20)
                   .showLoading()
               : _body();
         },
@@ -60,7 +60,7 @@ class HomePage extends StatelessWidget {
                     return DropdownButtonFormField<StateModel>(
                       validator: (value) {
                         if (value.isNull) {
-                          return 'Campo obrigatório';
+                          return 'Field required';
                         }
                         return null;
                       },
@@ -100,7 +100,7 @@ class HomePage extends StatelessWidget {
                         return DropdownButtonFormField(
                           validator: (value) {
                             if (value == null) {
-                              return 'Campo obrigatório';
+                              return 'Field required';
                             }
                             return null;
                           },
@@ -132,7 +132,7 @@ class HomePage extends StatelessWidget {
                   },
                 ),
                 MaterialButton(
-                  child: Text('Enviar'),
+                  child: Text('Send'),
                   onPressed: () {
                     var valid = _formKey.currentState.validate();
                     if (valid) {
@@ -153,7 +153,7 @@ class HomePage extends StatelessWidget {
                 Obx(
                   () => Text(
                     (_homeController.state.string.isNotEmpty
-                        ? 'Estado selecionado: ' + _homeController.state.string
+                        ? 'State selected: ' + _homeController.state.string
                         : ''),
                   ),
                 ),
@@ -163,7 +163,7 @@ class HomePage extends StatelessWidget {
                 Obx(
                       () => Text(
                     (_homeController.city.string.isNotEmpty
-                        ? 'Cidade selecionada: ' + _homeController.city.string
+                        ? 'City selected: ' + _homeController.city.string
                         : ''),
                   ),
                 ),
