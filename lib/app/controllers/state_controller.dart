@@ -5,8 +5,8 @@ import 'package:multilevel_dropdown_app/app/data/repositorys/state_repository.da
 class StateController extends GetxController {
   final _stateRepository = StateRepository();
 
-  final stateList = <StateModel>[].obs;
-  final loading = false.obs;
+  var stateList = <StateModel>[].obs;
+  var loading = false.obs;
 
   @override
   void onInit() => this.fetchStates();
@@ -15,8 +15,8 @@ class StateController extends GetxController {
     stateList.clear();
     stateList.addAll(await _stateRepository.fetchStateList());
     print('Total de estados: ' + stateList.length.toString());
-    update();
     loading.value = false;
+    update();
   }
 
 }

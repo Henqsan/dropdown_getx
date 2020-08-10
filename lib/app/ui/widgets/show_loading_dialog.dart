@@ -7,8 +7,8 @@ class ShowLoadingDialog {
 
   ShowLoadingDialog({@required this.context, this.circularIndicatorSize, this.willPop});
 
-  void showLoadingDialog() {
-    showDialog(
+  showLoadingDialog() {
+    return showDialog(
       context: context,
       builder: (context) {
         return WillPopScope(

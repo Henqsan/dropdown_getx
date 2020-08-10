@@ -1,16 +1,21 @@
 import 'package:flutter/material.dart';
 
-class BuildLoading extends StatelessWidget {
+class BuildLoading {
   String text;
-  BuildLoading(this.text);
+  double circularIndicatorSize;
 
-  @override
-  Widget build(BuildContext context) {
+  BuildLoading({@required this.text, this.circularIndicatorSize});
+
+  showLoading() {
     return Center(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          CircularProgressIndicator(),
+          Container(
+            height: circularIndicatorSize ?? 25,
+            width: circularIndicatorSize ?? 25,
+            child: CircularProgressIndicator(),
+          ),
           SizedBox(height: 10.0),
           Text(text),
         ],

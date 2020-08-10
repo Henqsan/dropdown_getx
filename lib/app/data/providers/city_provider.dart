@@ -6,18 +6,21 @@ class CityProvider {
     await Future.delayed(Duration(seconds: 1));
     if (id == "1")
       return [
-        CityModel("1", "Campinas"),
-        CityModel("2", "Ribeirão Preto"),
+        CityModel("1", "São Paulo"),
+        CityModel("2", "Campinas"),
+        CityModel("3", "Ribeirão Preto"),
       ];
     if (id == "2")
       return [
-        CityModel("3", "Saquarema"),
-        CityModel("4", "Maricá"),
+        CityModel("4", "Rio de Janeiro"),
+        CityModel("5", "Saquarema"),
+        CityModel("6", "Maricá"),
       ];
     if (id == "3")
       return [
-        CityModel("5", "Ouro Preto"),
-        CityModel("6", "Poços de Caldas"),
+        CityModel("7", "Minas Gerais"),
+        CityModel("8", "Ouro Preto"),
+        CityModel("9", "Poços de Caldas"),
       ];
     return Iterable.empty();
   }
